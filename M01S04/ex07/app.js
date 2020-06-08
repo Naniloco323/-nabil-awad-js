@@ -68,3 +68,49 @@ for (i = 0; i < arrayLength; i++) {
     }
     console.log(`${friend.name} ${friend.surname}`);
 }
+
+console.warn(`Folosind o bucla for afiseaza proprietatea name a tuturor obiectelor din arrayul friends.`);
+var message = '';
+var arrayLength = friends.length;
+var i = 0 ;
+
+for (i = 0; i < arrayLength; i++) {
+    var friend = friends[i];
+    var space = i !== arrayLength - 1 ? ' ' : '';
+    message += `${friend.name}${space}`;
+}
+
+console.log(message);
+
+console.warn('Afiseaza numele complet al tuturor prietenilor.');
+message = '';
+
+for (i = 0; i < arrayLength;i++) {
+    var friend = friends[i];
+
+    message += `${friend.name} ${friend.surname} `;
+    if (i === friends.length - 1) {
+    
+    message += '.';
+  } else {
+    message += ', ';
+  }
+
+   
+}
+
+console.log(message);
+
+console.warn(`Folosind keywordul break, afiseaza numele complet al prietenilor dar opeste bucla la primul surname care are numarul de caractere mai mare sau egal decat 9.`);
+var message = '';
+for (i = 0; i < arrayLength; i++ ) {
+    var friend = friends[i];
+
+    message += `${friend.name} ${friend.surname} `;
+
+    if ( friend.surname.length >= 9) {
+        break;
+    }
+    
+}
+console.log(message);
