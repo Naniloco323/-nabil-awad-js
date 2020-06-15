@@ -61,7 +61,7 @@ console.log(message);
 console.warn('Afiseaza propozitia: “Prietenii mei sunt Larry Steven si Carol.” folosind Object.keys()');
 friendsKeysNames = Object.keys(person.friends);
 message = 'Prietenii mei sunt ';
-
+friendsKeysNames = Object.keys(person.friends);
 friendsKeysNames.forEach(function (friendKey, i, friends) {
   var friendsLength = friends.length;
   var friend = person.friends[friendKey];
