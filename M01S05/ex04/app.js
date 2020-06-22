@@ -23,3 +23,4 @@ let calculateSquareArea = (l) => {
 };
 
 console.log(calculateSquareArea(2));
+
