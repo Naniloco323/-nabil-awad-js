@@ -14,19 +14,9 @@ if (Array.isArray(userAgentString.match(/firefox/ig))) {
   browserName = 'Firefox';
 }
 
-if (Array.isArray(userAgentString.match(/Edge/ig))) {
-  message = 'Navighezi folosind Edge';
-  browserName = 'Microsft Edge';
-}
-
 paragraphElement.innerText = message;
+
 document.body.appendChild(paragraphElement);
-
-setTimeout( function () {
-  
-  paragraphElement.remove();
-},6000);
-
 
 setTimeout(() => {
   userName = prompt(`${browserName} vrea sa stie cum te cheama.`);
@@ -37,14 +27,3 @@ setTimeout(() => {
 
   // setTimeout(() => {}, 3000);
 }, 3000);
-
-
-
-
-
-
-
-
- 
-
-
