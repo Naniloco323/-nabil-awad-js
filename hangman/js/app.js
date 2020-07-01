@@ -77,8 +77,8 @@ let checkGameState = () => {
   }
 
   if (gameEnded) {
-    alert(`Sorry Game over the word was  ${randomValueValue}`);
-    return;
+    alert(`Sorry you are wrong the word was  ${randomValueValue}`);
+    return location.reload();
   }
 };
 
