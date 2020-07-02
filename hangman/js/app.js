@@ -1,8 +1,8 @@
 let  words = {
   programming: ['php', 'javascript', 'go', 'scala', 'fortran',  'mysql', 'python'],
-  Animals: ["dog","cat",'camel','snake',"caribou","cassowary","caterpillar","chicken","crocodile"],
-  Countries: ['romania', 'brazil', 'egypt', 'sudan', 'spain', 'qatar'],
-  Sports: ['football', 'basketball' , 'climbing' ,'drifting']
+  animals: ['dog','cat','camel','snake','caribou','cassowary','caterpillar','chicken','crocodile'],
+  countries: ['romania', 'brazil', 'egypt', 'sudan', 'spain', 'qatar'],
+  sports: ['football', 'basketball' , 'climbing' ,'drifting']
 }
 let allKeys = Object.keys(words);
 let randomPropNumber = Math.floor(Math.random() * allKeys.length);
@@ -22,11 +22,12 @@ let keyboard = document.querySelector('.keyboard');
 let next = document.querySelector('.btn-primary');
 let reset = document.querySelector('.btn-danger');
 
+
 reset.addEventListener('click', () => {
   location.reload();
 })
 
-next.addEventListener('click' ,() => {
+next.addEventListener('click' , () => {
   location.reload();
 })
 
