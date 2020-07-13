@@ -63,3 +63,44 @@ $p2.appendTo(wrappingDiv);
 let msg = 'Mesaje';
 
 $(`<h2>${msg}</h2>`).prependTo(wrappingDiv);
+
+// Creaza un div cu clasa navigation si adauga-l dupa divul anterior, folosind metoda 
+// Creeaza un element de tip ancora cu textul Primul Link si clasa nav-link si adauga-l la divul cu clasa navigation.
+// Creeaza un element h2 cu textul “Navigatie” si folosind metoda .before() adauga-l la divul cu clasa navigation. Selectorul lui before va trebui sa fie selectorul ancorei pentru a functiona corect. Exemplu: .navigation .nav-link
+// Creeaza un element de tip sup cu textul 1 si folosind metoda .prepend() adauga-l in ancora .nav-link
+
+
+let $navigationDiv = $('<div>', {
+  class: 'navigation',
+});
+$(wrappingDiv).after($navigationDiv);
+
+let $firstLink = $('<a>', {
+  text:'Primul link',
+  class:'nav-link',
+}).appendTo($navigationDiv);
+
+
+$('.navigation .nav-link').before('<h2>Navigatie</h2>');
+
+$($firstLink).prepend('<sup>1<sup>');
+
+// Creeaza un element de tip h1 cu textul: “Invat jQuery” si folosind metoda .before() adauga-l deasupra divului .container 
+// Adauga prin orice metoda un paragraf cu textul “Documentatia jQuery poate fi gasita aici.” Cuvantul aici va fi o ancora care va deschide intr-o pagina noua documentia jQuery. Atributele target si href pot fi setate in acelasi fel cum sunt setate cele text sau class.
+
+$('.container').before('<h1>Invat jquery<h1>');
+
+let $p3 = $('<p>', {
+  text:'Documentatia jQuery poate fi gasita  ',
+})
+
+$p3.appendTo($body)
+
+let $documantationLink = $('<a>', {
+  text:'aici',
+  target:'_blank',
+  href:'https://api.jquery.com/',
+
+});
+
+$($p3).append($documantationLink);
