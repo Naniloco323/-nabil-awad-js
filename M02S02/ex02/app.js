@@ -139,61 +139,10 @@ $(document).ready(() => {
         value: $field.val(),
       });
     });
-    if (formFields[0].value === '' || formFields[1].value === '' || formFields[2].value === '') {
-      return;
-    }
+    
 
-    let $friendList = $('.person-friends');
-    let ulClass = 'friend-ul';
-    let $friendsUl = $(`.${ulClass}`);
-
-    if ($friendsUl.length < 1) {
-      $friendList.append(`<input type="checkbox" name="has-friends-list" id="has-friends-list" checked>
-      <label for="has-friends-list">Ascunde lista prietenilor</label>`);
-  
-      let $friendsUl = $('<ul>', {
-        class: ulClass,
-      }).appendTo($friendList);
-
-      let $friendLi = $('<li>', {
-        class: 'friend-li',
-        text: `Prietenul meu  este ${formFields[0].value} ${formFields[1].value} si are ${formFields[2].value} ani. `,
-      }).appendTo($friendsUl)
-        .append(`<button class="friend-delete">Sterge</button>`)
-        .on('click', '.friend-delete', (event) => {
-          $(event.currentTarget).parent().remove();
-        });
-
-      let $friendsCheck = $('#has-friends-list');
-      let $friendsCheckText = $friendsCheck.next('label');
-  
-      $friendsCheck.on('click', (event) => {
-        let $checkBox = $(event.currentTarget);
-        let isChecked = $checkBox.is(':checked');
-        
-        if (isChecked) {
-          $friendsUl.show();
-          $friendsCheckText.text('Ascunde lista prietenilor');
-        } else {
-          $friendsUl.hide();
-          $friendsCheckText.text('Afiseaza lista prietenilor');
-        }
-      });
-    } else {
-      let $friendLi = $('<li>', {
-        class: 'friend-li',
-        text: `Prietenul meu  este ${formFields[0].value} ${formFields[1].value} si are ${formFields[2].value} ani. `,
-      }).appendTo($friendsUl)
-        .append(`<button class="friend-delete">Sterge</button>`)
-        .on('click', '.friend-delete', (event) => {
-          $(event.currentTarget).parent().remove();
-        });
-    }
-
-    $('.friend-form').find('input[name]').val('');
   });
-
 });
-
-  });
+$( "label" ).click(function( event ) {
+  alert( event.currentTarget === this ); // true
 });
