@@ -62,6 +62,7 @@ p.innerText = `Masina se deplasa cu ${audi.speed} km/h.`;
 
 document.body.appendChild(p);
 
+
 // Modifica metodele accelerate si decelerate astfel incat sa primeasca un coeficient cu care sa mareasca sau sa reduca viteza si pastreaza conceptele de chaining.  Daca metodele nu sunt invocate cu un parametru explicit, sa incrementeze sau sa decrementeze cu o unitate.
 // Ridica viteza cu 12 apoi coboar-o cu 3 si apoi inca o data cu 4. 
 // Afiseaza viteza noua in DOM.
@@ -82,3 +83,7 @@ let p3 = document.createElement('p');
 p3.innerText = `Masina se deplasa cu ${audi.speed} km/h.`;
 
 document.body.appendChild(p3) ;
+
+
+
+

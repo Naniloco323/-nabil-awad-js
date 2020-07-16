@@ -54,3 +54,4 @@ let calculateSurface = (L, x) => {
  
  
  });
+
