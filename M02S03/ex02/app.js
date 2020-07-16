@@ -7,25 +7,11 @@ $('<p>', {
   text: 'Acesta este un mesaj de eroare!',
 })
   .appendTo($('body'))
-  .addClass('error');
-  
+  .addClass('error')
+  .prepend();
 
 let errorNumber = 1;
 let supElement = $(`<sup>${errorNumber}</sup>`).prependTo('.error');
-
-// $('<p class="err">Documentatia jQuery se afla <span>aici</span>.</p>').appendTo(
-//   $('body'),
-// );
-
-// $('p span')
-//   .empty()
-//   .replaceWith(
-//     $('<a>', {
-//       href: '//google.com',
-//       text: 'aici',
-//     }),
-//   );
-
 
 // Optimizeaza exemplul astfel incat sa foloseasca chaining direct pe paragraf si sa elimine nevoia de o variabila pentru elementul sup.
 
