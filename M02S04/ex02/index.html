@@ -9,6 +9,15 @@
         height: 100px; 
         border: 1px solid #000;
         transition: background-color 1s ease;
+        
+      }
+
+      .new-box {
+        width: 100px;
+        height: 100px; 
+        border: 1px solid #000;
+        transition: background-color 1s ease;
+        margin: 10px;
       }
 
     </style>
@@ -23,6 +32,17 @@
   <input type="color" id="color-input">
   <button>Apply</button>
   <button id="reset-bg">Reset</button>
+
+  <div class="container">
+    <div class=" new-box first-box">
+      <input type="checkbox"  id="my-check">
+      <label for="first-box">Color me</label>
+    </div>
+    <div class=" new-box second-box">
+      <input type="checkbox"  id="second-check">
+      <label for="second-box">Color me</label>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
